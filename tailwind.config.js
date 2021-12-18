@@ -7,5 +7,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@deck9/tailwindcss-ghost-typography'),require('@tailwindcss/typography')],
 }

@@ -1,18 +1,16 @@
 import Link from "next/link";
 
 const BlogPost = (props) => {
-  let thepost = { title: "Loading", created_at: "...." };
+  let thepost: any = { title: "Loading", created_at: "...." };
   if (props.thepost) {
     thepost = props.thepost;
   }
+
   // console.log(thepost);
 
   return (
-    <div className="container w-full md:max-w-3xl mx-auto pt-20">
-      <div
-        className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
-        style={{ fontFamily: "Georgia,serif" }}
-      >
+    <div className="container w-full md:max-w-2xl mx-auto pt-20  border">
+      <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
         {/* Title */}
         <div className="font-sans">
           <p className="text-base md:text-sm text-green-500 font-bold">
@@ -31,7 +29,10 @@ const BlogPost = (props) => {
           </p>
         </div>
         {/*Post Content*/}
-        <div dangerouslySetInnerHTML={{ __html: thepost.html }}></div>
+
+        <article className="prose prose-ghost sm:prose-ghost-lg dark:prose-ghost-dark">
+          <div dangerouslySetInnerHTML={{ __html: thepost.html }}></div>
+        </article>
       </div>
       {/*/Next & Prev Links*/}
     </div>

@@ -60,7 +60,7 @@ const PostsList = ({ allPosts }) => {
       </div>
 
       {allPosts.map((post) => {
-        return <PostCard thepost={post} />;
+        return <PostCard key={post.uuid} thepost={post} />;
       })}
 
       {/* <div className="mt-6">
