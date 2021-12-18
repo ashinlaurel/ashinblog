@@ -1,17 +1,36 @@
 import BlogPost from "../../components/blogpost/BlogPost";
+import ghostapi from "../../connectGhost";
 
 async function getPost(slug: string) {
-  //  const res = api
-  // const posts = res.posts;
-  // return posts[0];
+  let thepost = {};
+  try {
+    const res = await ghostapi.posts
+      .read({ slug: slug })
+      .then((post) => {
+        console.log("received");
+        thepost = post;
+        // console.log(post);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  } catch (error) {
+    console.log(error);
+  }
+  console.log("checkerrrrr", thepost);
+  return thepost;
 }
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
-  return {
-    props: { post },
-    revalidate: 10,
-  };
+  try {
+    const post = await getPost(params.slug);
+    return {
+      props: { post },
+      revalidate: 10,
+    };
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const getStaticPaths = () => {
@@ -23,8 +42,9 @@ export const getStaticPaths = () => {
   };
 };
 
-function About() {
-  return <BlogPost />;
+function About(props) {
+  // console.log("props", props);
+  return <BlogPost thepost={props.post} />;
 }
 
 export default About;

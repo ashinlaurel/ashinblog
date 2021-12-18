@@ -39,10 +39,10 @@ const TopBar = () => {
             <li className="mr-3">
               <div
                 className="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-                onClick={() => {
-                  if (colorTheme == "light") setTheme("dark");
-                  else setTheme("light");
-                }}
+                // onClick={() => {
+                //   if (colorTheme == "light") setTheme("dark");
+                //   else setTheme("light");
+                // }}
               >
                 {colorTheme == "light" ? "Dark Mode" : "Light Mode"}
               </div>
