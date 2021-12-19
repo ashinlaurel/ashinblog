@@ -1,3 +1,11 @@
+import {
+  ArrowRight,
+  Briefcase,
+  Money,
+  Person,
+  Plant,
+  ReactFill,
+} from "akar-icons";
 import { useState } from "react";
 
 const RightBar = () => {
@@ -27,11 +35,12 @@ const RightBar = () => {
         <div className="flex flex-col max-w-sm px-6 py-4 mx-auto bg-white rounded-lg shadow-md">
           <ul className="-mx-4">
             <li className="flex items-center">
-              <img
-                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
+              {/* <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=731&q=80"
                 alt="avatar"
                 className="object-cover w-10 h-10 mx-4 rounded-full"
-              />
+              /> */}
+              <ReactFill strokeWidth={1} size={28} className="mx-4" />
               <p>
                 <a
                   href="#"
@@ -45,47 +54,7 @@ const RightBar = () => {
               </p>
             </li>
             <li className="flex items-center mt-6">
-              <img
-                src="https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80"
-                alt="avatar"
-                className="object-cover w-10 h-10 mx-4 rounded-full"
-              />
-              <p>
-                <a
-                  href="#"
-                  className="mx-1 font-bold text-gray-700 hover:underline"
-                >
-                  Economics
-                </a>
-                <span className="text-sm font-light text-gray-700">
-                  -52 Posts
-                </span>
-              </p>
-            </li>
-            <li className="flex items-center mt-6">
-              <img
-                src="https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=281&q=80"
-                alt="avatar"
-                className="object-cover w-10 h-10 mx-4 rounded-full"
-              />
-              <p>
-                <a
-                  href="#"
-                  className="mx-1 font-bold text-gray-700 hover:underline"
-                >
-                  Life
-                </a>
-                <span className="text-sm font-light text-gray-700">
-                  -73 Posts
-                </span>
-              </p>
-            </li>
-            <li className="flex items-center mt-6">
-              <img
-                src="https://images.unsplash.com/photo-1500757810556-5d600d9b737d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=735&q=80"
-                alt="avatar"
-                className="object-cover w-10 h-10 mx-4 rounded-full"
-              />
+              <Briefcase strokeWidth={1} size={28} className="mx-4" />
               <p>
                 <a
                   href="#"
@@ -99,11 +68,36 @@ const RightBar = () => {
               </p>
             </li>
             <li className="flex items-center mt-6">
-              <img
-                src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=373&q=80"
-                alt="avatar"
-                className="object-cover w-10 h-10 mx-4 rounded-full"
-              />
+              <Money strokeWidth={1} size={28} className="mx-4" />
+              <p>
+                <a
+                  href="#"
+                  className="mx-1 font-bold text-gray-700 hover:underline"
+                >
+                  Economics
+                </a>
+                <span className="text-sm font-light text-gray-700">
+                  -52 Posts
+                </span>
+              </p>
+            </li>
+            <li className="flex items-center mt-6">
+              <Plant strokeWidth={1} size={28} className="mx-4" />
+              <p>
+                <a
+                  href="#"
+                  className="mx-1 font-bold text-gray-700 hover:underline"
+                >
+                  Life
+                </a>
+                <span className="text-sm font-light text-gray-700">
+                  -73 Posts
+                </span>
+              </p>
+            </li>
+
+            <li className="flex items-center mt-6">
+              <Person strokeWidth={1} size={28} className="mx-4" />
               <p>
                 <a
                   href="#"

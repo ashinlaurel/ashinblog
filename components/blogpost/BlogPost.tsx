@@ -1,4 +1,5 @@
 import Link from "next/link";
+import moment from "moment";
 
 const BlogPost = (props) => {
   let thepost: any = { title: "Loading", created_at: "...." };
@@ -9,8 +10,8 @@ const BlogPost = (props) => {
   // console.log(thepost);
 
   return (
-    <div className="container w-full md:max-w-2xl mx-auto pt-20  border">
-      <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
+    <div className="container w-full  mx-auto">
+      <div className="w-full px-4 md:px-6 text-xl text-gray-800 dark:text-gray-100 leading-normal">
         {/* Title */}
         <div className="font-sans">
           <p className="text-base md:text-sm text-green-500 font-bold">
@@ -21,17 +22,42 @@ const BlogPost = (props) => {
               </a>
             </Link>
           </p>
-          <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
-            {thepost.title}
-          </h1>
-          <p className="text-sm md:text-base font-normal text-gray-600">
-            Published {thepost.created_at}
-          </p>
+
+          {/* Top Head */}
+          <div
+            className="container mx-auto max-w-5xl flex flex-col  md:pt-10
+          "
+          >
+            <h1 className="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 pt-6 pb-2 text-4xl md:text-5xl">
+              {thepost.title}
+            </h1>
+            <p className="max-w-4xl pt-2 pb-4 text-lg font-normal text-gray-600">
+              {thepost.custom_excerpt}
+            </p>
+            <hr className="" />
+            <div className="pt-2">
+              <p className="text-sm md:text-base font-normal text-gray-600">
+                Published on {moment(thepost.created_at).format("Do MMM YY")}
+              </p>
+              <p className="text-sm md:text-base font-normal text-gray-600">
+                {thepost.reading_time} MIN READ
+              </p>
+            </div>
+          </div>
         </div>
+
+        {/* Main Image */}
+        <div className="max-w-4xl container mx-auto mt-7">
+          <img src={thepost.feature_image}></img>
+        </div>
+
         {/*Post Content*/}
 
-        <article className="prose prose-ghost sm:prose-ghost-lg dark:prose-ghost-dark">
-          <div dangerouslySetInnerHTML={{ __html: thepost.html }}></div>
+        <article className=" prose md:prose-xl max-w-none prose-ghost sm:prose-ghost-lg dark:prose-ghost-dark ">
+          <div
+            className="max-w-3xl container mx-auto"
+            dangerouslySetInnerHTML={{ __html: thepost.html }}
+          ></div>
         </article>
       </div>
       {/*/Next & Prev Links*/}

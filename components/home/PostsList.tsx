@@ -3,8 +3,8 @@ import Link from "next/link";
 const PostCard = (props) => {
   let { thepost } = props;
   return (
-    <div className="mt-6">
-      <div className="w-full px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+    <div className="mt-6 ">
+      <div className="w-full px-5 md:px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
         <div className="flex items-center justify-between">
           <span className="font-light text-gray-600">mar 4, 2019</span>
 
@@ -48,9 +48,9 @@ const PostCard = (props) => {
 const PostsList = ({ allPosts }) => {
   // console.log("there there", allPosts);
   return (
-    <div className="w-full">
+    <div className="">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold text-gray-700 md:text-2xl">Post</h1>
+        <h1 className="text-xl font-bold text-gray-700 md:text-2xl">Posts</h1>
         <div>
           <select className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             <option>Latest</option>
