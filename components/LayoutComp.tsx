@@ -1,5 +1,5 @@
 import BlogPost from "./blogpost/BlogPost";
-import PostsList from "./home/PostsList";
+// import PostsList from "./home/FeaturedPosts";
 import RightBar from "./RightBar";
 import TopBar from "./TopBar";
 

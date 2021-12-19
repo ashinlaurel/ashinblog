@@ -229,15 +229,15 @@ const RightBar = () => {
           Recent Post
         </h1>
         <div className="flex flex-col max-w-sm px-8 py-6 mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <a
               href="#"
               className="px-2 py-1 text-sm text-green-100 dark:text-white bg-gray-600 rounded hover:bg-gray-500"
             >
               Laravel
             </a>
-          </div>
-          <div className="mt-4">
+          </div> */}
+          <div className="">
             <a
               href="#"
               className="text-lg font-medium text-gray-700 dark:text-white hover:underline"

@@ -1,7 +1,8 @@
 import BlogPost from "../blogpost/BlogPost";
 import RightBar from "../RightBar";
+import FeaturedPosts from "./FeaturedPosts";
 import Hero from "./Hero";
-import PostsList from "./PostsList";
+// import PostsList from "./FeaturedPosts";
 
 const HomeComp = ({ allPosts }) => {
   // console.log("These", props);
@@ -9,7 +10,7 @@ const HomeComp = ({ allPosts }) => {
     <div>
       <Hero />
       <div className="container mx-auto max-w-5xl ">
-        <PostsList allPosts={allPosts} />
+        <FeaturedPosts allPosts={allPosts} />
       </div>
 
       {/* <BlogPost /> */}

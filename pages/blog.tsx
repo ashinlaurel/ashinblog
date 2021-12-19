@@ -1,7 +1,8 @@
 import HomeComp from "../components/home/HomeComp";
 import BlogPost from "../components/blogpost/BlogPost";
 import ghostapi from "../connectGhost";
-import PostsList from "../components/home/PostsList";
+
+import BlogList from "../components/bloglist/BlogList";
 // import { useAuth } from "../contexts/AuthContext";
 
 type Post = {
@@ -28,6 +29,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: { posts },
+    revalidate: 60,
   };
 };
 
@@ -35,7 +37,7 @@ function Blog(props) {
   // console.log("props", props);
   return (
     <div className="container mx-6">
-      <PostsList allPosts={props.posts} />;
+      <BlogList allPosts={props.posts} />;
     </div>
   );
 }

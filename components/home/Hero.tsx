@@ -12,10 +12,10 @@ const Hero = () => {
           Welcome To My Blog !
         </h1>
         <p className="max-w-4xl pt-2 pb-4 text-lg font-normal text-gray-600 dark:text-gray-100">
-          Welcome, it&aposs great to have you here. In this era where highly
-          stimulating forms of entertainment are taking over people&aposs time,
-          I&aposm extremely happy that you took the time to come here. Who told
-          blogs are dying eh??😅
+          Welcome, it's great to have you here. In this era where highly
+          stimulating forms of entertainment are taking over people's time, I'm
+          extremely happy that you took the time to come here. Who told blogs
+          are dying eh??😅
         </p>
         <hr />
 

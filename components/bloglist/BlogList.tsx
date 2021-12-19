@@ -49,7 +49,7 @@ const PostCard = (props) => {
   );
 };
 
-const PostsList = ({ allPosts }) => {
+const BlogList = ({ allPosts }) => {
   // console.log("there there", allPosts);
   return (
     <div className=" mt-4">
@@ -105,4 +105,4 @@ const PostsList = ({ allPosts }) => {
   );
 };
 
-export default PostsList;
+export default BlogList;
