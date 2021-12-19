@@ -1,10 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-
 import HomeComp from "../components/home/HomeComp";
 import BlogPost from "../components/blogpost/BlogPost";
 import ghostapi from "../connectGhost";
+import PostsList from "../components/home/PostsList";
 // import { useAuth } from "../contexts/AuthContext";
 
 type Post = {
@@ -18,7 +15,7 @@ async function getPosts() {}
 export const getStaticProps = async ({ params }) => {
   const posts = await ghostapi.posts
     .browse({
-      limit: 3,
+      limit: "all",
       fields: ["title", "slug", "custom_excerpt", "published_at"],
     })
     .catch((err) => {
@@ -34,13 +31,13 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-const Home: React.FC<{ posts: Post }> = (props) => {
+function Blog(props) {
+  // console.log("props", props);
   return (
-    <div className={styles.container}>
-      <HomeComp allPosts={props.posts} />
-      {/* <BlogPost /> */}
+    <div className="container mx-6">
+      <PostsList allPosts={props.posts} />;
     </div>
   );
-};
+}
 
-export default Home;
+export default Blog;

@@ -4,11 +4,13 @@ const PostCard = (props) => {
   let { thepost } = props;
   return (
     <div className="mt-6 ">
-      <div className="w-full px-5 md:px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+      <div className="w-full px-5 md:px-10 py-6 mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md">
         <div className="flex items-center justify-between">
-          <span className="font-light text-gray-600">mar 4, 2019</span>
+          <span className="font-light text-gray-600 dark:text-white">
+            mar 4, 2019
+          </span>
 
-          <a className="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">
+          <a className="px-2 py-1 font-bold text-gray-100  bg-gray-600 rounded hover:bg-gray-500">
             Design
           </a>
         </div>
@@ -16,12 +18,14 @@ const PostCard = (props) => {
           <Link href="/viewpost/[slug]" as={`/viewpost/${thepost.slug}`}>
             <a
               href="#"
-              className="text-2xl font-bold text-gray-700 hover:underline"
+              className="text-2xl font-bold text-gray-700 dark:text-white hover:underline"
             >
               {thepost.title}
             </a>
           </Link>
-          <p className="mt-2 text-gray-600">{thepost.custom_excerpt}</p>
+          <p className="mt-2 text-gray-600 dark:text-white">
+            {thepost.custom_excerpt}
+          </p>
         </div>
         <div className="flex items-center justify-between mt-4">
           <a href="#" className="text-blue-500 hover:underline">
@@ -48,7 +52,7 @@ const PostCard = (props) => {
 const PostsList = ({ allPosts }) => {
   // console.log("there there", allPosts);
   return (
-    <div className="">
+    <div className=" mt-4">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold text-gray-700 md:text-2xl">Posts</h1>
         <div>
@@ -63,138 +67,6 @@ const PostsList = ({ allPosts }) => {
         return <PostCard key={post.uuid} thepost={post} />;
       })}
 
-      {/* <div className="mt-6">
-        <div className="w-full px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
-          <div className="flex items-center justify-between">
-            <span className="font-light text-gray-600">Feb 14, 2019</span>
-            <a
-              href="#"
-              className="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500"
-            >
-              PHP
-            </a>
-          </div>
-          <div className="mt-2">
-            <a
-              href="#"
-              className="text-2xl font-bold text-gray-700 hover:underline"
-            >
-              PHP: Array to Map
-            </a>
-            <p className="mt-2 text-gray-600">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-              expedita dicta totam aspernatur doloremque. Excepturi iste iusto
-              eos enim reprehenderit nisi, accusamus delectus nihil quis facere
-              in modi ratione libero!
-            </p>
-          </div>
-          <div className="flex items-center justify-between mt-4">
-            <a href="#" className="text-blue-500 hover:underline">
-              Read more
-            </a>
-            <div>
-              <a href="#" className="flex items-center">
-                <img
-                  src="https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=281&q=80"
-                  alt="avatar"
-                  className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
-                />
-                <h1 className="font-bold text-gray-700 hover:underline">
-                  Lisa Way
-                </h1>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-6">
-        <div className="w-full px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
-          <div className="flex items-center justify-between">
-            <span className="font-light text-gray-600">Dec 23, 2018</span>
-            <a
-              href="#"
-              className="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500"
-            >
-              Django
-            </a>
-          </div>
-          <div className="mt-2">
-            <a
-              href="#"
-              className="text-2xl font-bold text-gray-700 hover:underline"
-            >
-              Django Dashboard - Learn by Coding
-            </a>
-            <p className="mt-2 text-gray-600">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-              expedita dicta totam aspernatur doloremque. Excepturi iste iusto
-              eos enim reprehenderit nisi, accusamus delectus nihil quis facere
-              in modi ratione libero!
-            </p>
-          </div>
-          <div className="flex items-center justify-between mt-4">
-            <a href="#" className="text-blue-500 hover:underline">
-              Read more
-            </a>
-            <div>
-              <a href="#" className="flex items-center">
-                <img
-                  src="https://images.unsplash.com/photo-1500757810556-5d600d9b737d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=735&q=80"
-                  alt="avatar"
-                  className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
-                />
-                <h1 className="font-bold text-gray-700 hover:underline">
-                  Steve Matt
-                </h1>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-6">
-        <div className="w-full px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
-          <div className="flex items-center justify-between">
-            <span className="font-light text-gray-600">Mar 10, 2018</span>
-            <a
-              href="#"
-              className="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500"
-            >
-              Testing
-            </a>
-          </div>
-          <div className="mt-2">
-            <a
-              href="#"
-              className="text-2xl font-bold text-gray-700 hover:underline"
-            >
-              TDD Frist
-            </a>
-            <p className="mt-2 text-gray-600">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-              expedita dicta totam aspernatur doloremque. Excepturi iste iusto
-              eos enim reprehenderit nisi, accusamus delectus nihil quis facere
-              in modi ratione libero!
-            </p>
-          </div>
-          <div className="flex items-center justify-between mt-4">
-            <a href="#" className="text-blue-500 hover:underline">
-              Read more
-            </a>
-            <div>
-              <a href="#" className="flex items-center">
-                <img
-                  src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=373&q=80"
-                  alt="avatar"
-                  className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
-                />
-                <h1 className="font-bold text-gray-700 hover:underline">
-                  Khatab Wedaa
-                </h1>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="mt-8">
         <div className="flex">
           <a

@@ -1,11 +1,11 @@
-import useDarkMode from "../darkModeStuff/darkMode";
+import { LightBulb, Moon } from "akar-icons";
+import { useTheme } from "next-themes";
 
 const TopBar = () => {
-  //importing stuff from darkmode function
-  const [colorTheme, setTheme] = useDarkMode();
+  const { theme, setTheme } = useTheme();
   return (
-    <nav id="header" className="fixed w-full z-10 top-0">
-      <div className="w-full bg-white dark:bg-black px-6  mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+    <nav id="header" className="fixed w-full z-10 top-0 ">
+      <div className="w-full bg-gray-100 dark:bg-gray-900 shadow-sm px-6  mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
         <div className="pl-4">
           <a
             className="text-gray-900 dark:text-gray-100  no-underline hover:no-underline font-extrabold text-xl"
@@ -14,6 +14,11 @@ const TopBar = () => {
             Ashin Laurel
           </a>
         </div>
+
+        {/* <div className="text-xl font-semibold px-6 py-4 mx-auto  bg-white rounded-lg shadow-md">
+          {" "}
+          Ashin Laurel
+        </div> */}
 
         <div className="block lg:hidden pr-4">
           <button
@@ -36,32 +41,28 @@ const TopBar = () => {
           id="nav-content"
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
+            {/* <li className="mr-3">
+              <a
+                className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+                href="#"
+              >
+                link
+              </a>
+            </li> */}
+
             <li className="mr-3">
               <div
-                className="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-                // onClick={() => {
-                //   if (colorTheme == "light") setTheme("dark");
-                //   else setTheme("light");
-                // }}
+                className="inline-block py-2 px-4 text-gray-900 cursor-pointer font-bold no-underline"
+                onClick={() => {
+                  setTheme(theme === "dark" ? "light" : "dark");
+                }}
               >
-                {colorTheme == "light" ? "Dark Mode" : "Light Mode"}
+                {theme == "light" ? (
+                  <Moon strokeWidth={2} size={24} />
+                ) : (
+                  <LightBulb color="white" strokeWidth={2} size={24} />
+                )}
               </div>
-            </li>
-            <li className="mr-3">
-              <a
-                className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-                href="#"
-              >
-                link
-              </a>
-            </li>
-            <li className="mr-3">
-              <a
-                className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-                href="#"
-              >
-                link
-              </a>
             </li>
           </ul>
         </div>
