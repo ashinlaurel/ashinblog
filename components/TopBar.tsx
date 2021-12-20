@@ -57,8 +57,8 @@ const TopBar = () => {
                   setTheme(theme === "dark" ? "light" : "dark");
                 }}
               >
-                {theme == "light" ? (
-                  <Moon strokeWidth={2} size={24} />
+                {theme != "dark" ? (
+                  <Moon color="black" strokeWidth={2} size={24} />
                 ) : (
                   <LightBulb color="white" strokeWidth={2} size={24} />
                 )}

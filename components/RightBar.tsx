@@ -15,7 +15,7 @@ const RightBar = () => {
 
   return (
     <div
-      className={`hidden w-3/12 mt-8  -mx-8 bg-neutral-100 dark:bg-gray-900 transition-all ${
+      className={`hidden w-3/12 mt-8   bg-neutral-100 dark:bg-gray-900 transition-all ${
         toHide == true ? "hidden" : "lg:block"
       }`}
     >
@@ -151,21 +151,6 @@ const RightBar = () => {
                 </span>
               </p>
             </li>
-
-            <li className="flex items-center mt-6">
-              <Person strokeWidth={1} size={28} className="mx-4" />
-              <p>
-                <a
-                  href="#"
-                  className="mx-1 font-bold dark:text-white text-gray-700 hover:underline"
-                >
-                  About Me
-                </a>
-                {/* <span className="text-sm font-light text-gray-700">
-                  Created 332 Posts
-                </span> */}
-              </p>
-            </li>
           </ul>
         </div>
       </div>
@@ -246,13 +231,13 @@ const RightBar = () => {
             </a>
           </div>
           <div className="flex items-center justify-between mt-4">
-            <div className="flex items-center">
+            <div className="flex items-center ">
               {/* <img
                 src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
                 alt="avatar"
                 className="object-cover w-8 h-8 rounded-full"
               /> */}
-              <Pencil color="white" strokeWidth={2} size={24} />
+              <Pencil color="black" strokeWidth={2} size={24} />
               <a
                 href="#"
                 className="mx-3 text-sm text-gray-700 hover:underline dark:text-white"

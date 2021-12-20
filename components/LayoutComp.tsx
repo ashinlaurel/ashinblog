@@ -5,11 +5,11 @@ import TopBar from "./TopBar";
 
 const LayoutComp = ({ children }) => {
   return (
-    <div>
+    <div className=" dark:bg-gray-900 bg-gray-100">
       <TopBar />
-      <div className=" mt-10 overflow-x-hidden dark:bg-gray-900 bg-gray-100">
+      <div className=" mt-10 overflow-x-hidden  ">
         <div className="px-6 py-8">
-          <div className="container flex justify-between mx-auto">
+          <div className=" flex justify-between container mx-auto ">
             <RightBar />
             {children}
             {/* <PostsList /> */}
