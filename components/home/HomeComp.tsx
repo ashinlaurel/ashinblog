@@ -1,3 +1,4 @@
+import BlogList2 from "../bloglist/BlogList2";
 import BlogPost from "../blogpost/BlogPost";
 import RightBar from "../RightBar";
 import FeaturedPosts from "./FeaturedPosts";
@@ -7,9 +8,9 @@ import Hero from "./Hero";
 const HomeComp = ({ allPosts }) => {
   // console.log("These", props);
   return (
-    <div>
+    <div className="container mx-auto max-w-8xl">
       <Hero />
-      <div className="container mx-auto max-w-5xl ">
+      <div className=" ">
         <FeaturedPosts allPosts={allPosts} />
       </div>
 

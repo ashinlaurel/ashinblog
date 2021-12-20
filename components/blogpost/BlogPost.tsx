@@ -1,10 +1,27 @@
 import Link from "next/link";
 import moment from "moment";
+import { useState } from "react";
 
 const BlogPost = (props) => {
   let thepost: any = { title: "Loading", created_at: "...." };
   if (props.thepost) {
     thepost = props.thepost;
+  }
+
+  const [enableLoadComments, setEnableLoadComments] = useState<boolean>(true);
+
+  function loadComments() {
+    setEnableLoadComments(false);
+    (window as any).disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = thepost.slug;
+    };
+
+    const script = document.createElement("script");
+    script.src = "https://ashinchats.disqus.com/embed.js";
+    script.setAttribute("data-timestamp", Date.now().toString());
+
+    document.body.appendChild(script);
   }
 
   // console.log(thepost);
@@ -60,6 +77,10 @@ const BlogPost = (props) => {
           ></div>
         </article>
       </div>
+
+      {/* {enableLoadComments && <p onClick={loadComments}>Load Comments</p>} */}
+
+      {/* <div id="disqus_thread"></div> */}
       {/*/Next & Prev Links*/}
     </div>
   );

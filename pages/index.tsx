@@ -11,6 +11,8 @@ type Post = {
   title: string;
   slug: string;
   published_at: string;
+  feature_image: string;
+  reading_time: string;
 };
 
 async function getPosts() {}
@@ -19,7 +21,14 @@ export const getStaticProps = async ({ params }) => {
   const posts = await ghostapi.posts
     .browse({
       limit: 3,
-      fields: ["title", "slug", "custom_excerpt", "published_at"],
+      fields: [
+        "title",
+        "slug",
+        "custom_excerpt",
+        "published_at",
+        "feature_image",
+        "reading_time",
+      ],
     })
     .catch((err) => {
       console.error(err);

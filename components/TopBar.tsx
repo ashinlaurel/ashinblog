@@ -57,11 +57,12 @@ const TopBar = () => {
                   setTheme(theme === "dark" ? "light" : "dark");
                 }}
               >
-                {theme != "dark" ? (
+                <div className="dark:hidden">
                   <Moon color="black" strokeWidth={2} size={24} />
-                ) : (
+                </div>
+                <div className="hidden dark:block">
                   <LightBulb color="white" strokeWidth={2} size={24} />
-                )}
+                </div>
               </div>
             </li>
           </ul>

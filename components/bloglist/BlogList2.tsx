@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const PostCard = ({ thepost }) => {
   return (
-    <div className=" overflow-hidden shadow-lg rounded-lg  w-60 md:w-80 mx-2 cursor-pointer ">
+    <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer my-4 ">
       <Link href="/viewpost/[slug]" as={`/viewpost/${thepost.slug}`}>
         <a href="#" className="w-full block h-full">
           <img
@@ -49,16 +49,36 @@ const PostCard = ({ thepost }) => {
   );
 };
 
-const FeaturedPosts = ({ allPosts }) => {
+const BlogList2 = ({ allPosts }) => {
   // console.log("there there", allPosts)
   return (
-    <div className="w-full bg-white dark:bg-gray-800 p-8 mt-8 rounded-lg shadow-sm">
+    <div className="w-full bg-white dark:bg-gray-800 p-12 mt-8 rounded-lg shadow-sm">
       <div className="header flex items-end justify-between mb-12">
         <div className="title">
-          <p className="text-4xl font-bold text-gray-800 dark:text-white mb-3">
-            Featured Articles
+          <p className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            Latest articles
           </p>
-          <p className="text-2xl font-light text-gray-400">Give these a try!</p>
+          <p className="text-2xl font-light text-gray-400">
+            All articles made with love! 💙
+          </p>
+        </div>
+        <div className="text-end">
+          <form className="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
+            <div className=" relative ">
+              <input
+                type="text"
+                id='"form-subscribe-Search'
+                className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white dark:bg-gray-900 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                placeholder="Enter a title"
+              />
+            </div>
+            <button
+              className="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-purple-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
         </div>
       </div>
       <div className="flex flex-row flex-wrap items-stretch justify-between">
@@ -70,4 +90,4 @@ const FeaturedPosts = ({ allPosts }) => {
   );
 };
 
-export default FeaturedPosts;
+export default BlogList2;
