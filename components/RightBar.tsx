@@ -105,7 +105,7 @@ const RightBar = () => {
                   Development
                 </a>
                 <span className="text-sm font-light text-gray-700 dark:text-white">
-                  -23 Posts
+                  - 23 Posts
                 </span>
               </p>
             </li>
@@ -119,7 +119,7 @@ const RightBar = () => {
                   My Projects
                 </a>
                 <span className="text-sm font-light dark:text-white text-gray-700">
-                  -245 Posts
+                  - 245 Posts
                 </span>
               </p>
             </li>
@@ -133,7 +133,7 @@ const RightBar = () => {
                   Economics
                 </a>
                 <span className="text-sm dark:text-white font-light text-gray-700">
-                  -52 Posts
+                  - 52 Posts
                 </span>
               </p>
             </li>
@@ -147,7 +147,7 @@ const RightBar = () => {
                   Life
                 </a>
                 <span className="text-sm dark:text-white font-light text-gray-700">
-                  -73 Posts
+                  - 73 Posts
                 </span>
               </p>
             </li>

@@ -1,4 +1,5 @@
 import BlogPost from "./blogpost/BlogPost";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 // import PostsList from "./home/FeaturedPosts";
 import RightBar from "./RightBar";
@@ -17,6 +18,11 @@ const LayoutComp = ({ children }) => {
           {/* rightbar */}
         </div>
       </div>
+      <div className="flex items-center justify-center container mx-auto">
+        <Footer />
+      </div>
+
+      <div className="w-full bg-gray-100 dark:bg-gray-900 h-10"></div>
     </div>
   );
 };

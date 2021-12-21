@@ -44,7 +44,7 @@ const Hero = () => {
           Apple Music).
         </p>
 
-        <p className="max-w-4xl  pb-4 text-lg font-normal text-gray-600 dark:text-gray-100">
+        <p className="max-w-4xl mt-2 pb-4 text-lg font-normal text-gray-600 dark:text-gray-100">
           So what am I doing here you ask; Let me explain: I have this quirk,
           whenever I discover something new, I have this unbearable tendency to
           call my friends and introduce it to them. And through this process I
