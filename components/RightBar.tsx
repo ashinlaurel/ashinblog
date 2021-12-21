@@ -15,7 +15,7 @@ const RightBar = () => {
 
   return (
     <div
-      className={`hidden w-3/12 mt-8   bg-neutral-100 dark:bg-gray-900 transition-all ${
+      className={`hidden w-3/12 mt-8 transition-all ${
         toHide == true ? "hidden" : "lg:block"
       }`}
     >

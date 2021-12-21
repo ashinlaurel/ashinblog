@@ -53,7 +53,7 @@ const BlogList2 = ({ allPosts }) => {
   // console.log("there there", allPosts)
   return (
     <div className="w-full bg-white dark:bg-gray-800 p-12 mt-8 rounded-lg shadow-sm">
-      <div className="header flex items-end justify-between mb-12">
+      <div className="header flex flex-col md:flex-row  items-end justify-between mb-12">
         <div className="title">
           <p className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
             Latest articles

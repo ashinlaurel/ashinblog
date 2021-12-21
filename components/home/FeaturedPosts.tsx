@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const PostCard = ({ thepost }) => {
   return (
-    <div className=" overflow-hidden shadow-lg rounded-lg  w-60 md:w-80 mx-2 cursor-pointer ">
+    <div className=" overflow-hidden shadow-lg rounded-lg my-4   w-full xl:w-80 mx-2 cursor-pointer ">
       <Link href="/viewpost/[slug]" as={`/viewpost/${thepost.slug}`}>
         <a href="#" className="w-full block h-full">
           <img

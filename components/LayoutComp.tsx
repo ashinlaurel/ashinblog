@@ -1,20 +1,20 @@
 import BlogPost from "./blogpost/BlogPost";
+import NavBar from "./NavBar";
 // import PostsList from "./home/FeaturedPosts";
 import RightBar from "./RightBar";
 import TopBar from "./TopBar";
 
 const LayoutComp = ({ children }) => {
   return (
-    <div className=" dark:bg-gray-900 bg-gray-100">
-      <TopBar />
-      <div className=" mt-10 overflow-x-hidden  ">
-        <div className="px-6 py-8">
-          <div className=" flex justify-between container mx-auto ">
-            <RightBar />
-            {children}
-            {/* <PostsList /> */}
-            {/* rightbar */}
-          </div>
+    <div className=" dark:bg-gray-900 bg-gray-100  ">
+      {/* <TopBar /> */}
+      <NavBar />
+      <div className=" mt-10 container mx-auto  ">
+        <div className=" flex justify-between ">
+          <RightBar />
+          {children}
+          {/* <PostsList /> */}
+          {/* rightbar */}
         </div>
       </div>
     </div>

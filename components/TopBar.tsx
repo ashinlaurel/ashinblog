@@ -6,7 +6,7 @@ const TopBar = () => {
   return (
     <nav id="header" className="fixed w-full z-10 top-0 ">
       <div className="w-full bg-gray-100 dark:bg-gray-900 shadow-sm px-6  mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
-        <div className="pl-4">
+        <div className="pl-10">
           <a
             className="text-gray-900 dark:text-gray-100  no-underline hover:no-underline font-extrabold text-xl"
             href="#"
